@@ -40,7 +40,7 @@
       }
       .menu {
         transition: transform 0.5s ease-in-out; text-align: right;
-        font-weight: bold; font-size: 20px;
+        font-weight: bold; font-size: 20px; color: #fff;
         position: fixed; top: 5px; right: 10px;
       }
       .showmenu.menu { transform: rotate(-90deg); }
@@ -71,6 +71,7 @@
           text.innerHTML = "&#10005;";
         } else { text.innerHTML = "&#9776"; }
         document.getElementById("menu").classList.toggle("showmenu");
+        document.getElementById("opsi").classList.toggle("showopsi");
       }
     </script>
   </body>
