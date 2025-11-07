@@ -39,7 +39,7 @@
         right: 0;
       }
       .menu { transition: transform 0.5s ease-in-out; }
-      .showmenu.menu { transform: rotate(-45deg); }
+      .showmenu.menu { transform: rotate(-90deg); }
       
     </style>
   </head>
@@ -62,6 +62,10 @@
     <p>Rendi Marzikri yang asli: <a href="https://m.youtube.com/@User-bs1bc7sx5">@User-bs1bc7sx5</p>
     <script>
       function menu() {
+        var text= document.getElementById("menu");
+        if (text.innerHTML === "&#9776;") {
+          text.innerHTML = "&#1005;";
+        } else { text.innerHTML = "&#9776"; }
         document.getElementById("menu").classList.toggle("showmenu");
       }
     </script>
