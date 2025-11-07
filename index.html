@@ -38,7 +38,10 @@
       .showopsi.opsi {
         right: 0;
       }
-      .menu { transition: transform 0.5s ease-in-out; }
+      .menu {
+        transition: transform 0.5s ease-in-out; text-align: right;
+        font-weight: bold; font-size: 20px;
+      }
       .showmenu.menu { transform: rotate(-90deg); }
       
     </style>
@@ -50,7 +53,7 @@
       <a href="#kontak" style="margin-left: 10px">kontak</a>
       <a href="tentang" style="margin-left: 10px">tentang</a>
       </div>
-      <span style="font-weight: bold; text-align: right; font-size: 20px; cursor: pointer" class="menu" onclick="menu()" id="menu">&#9776;</span>
+      <span class="menu" onclick="menu()" id="menu">&#9776;</span>
     </div>
     <div class="opsi" id="opsi">
       <span>halaman 1</span><br>
