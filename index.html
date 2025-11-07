@@ -29,11 +29,12 @@
       .opsi {
         background: #555;
         color: #f4f4f4;
-        padding: 10px;
+        padding: 20px;
         position: fixed;
         right: -100%;
-        top: 20px;
-        transition: right 1.5s ease-in-out;
+        top: 40px;
+        transition: right 0.5s ease-in-out;
+        font-size: 26px;
       }
       .showopsi.opsi {
         right: 0;
@@ -41,7 +42,7 @@
       .menu {
         transition: transform 0.5s ease-in-out; text-align: right;
         font-weight: bold; font-size: 20px; color: #fff;
-        position: fixed; top: 5px; right: 10px;
+        position: fixed; top: 5px; right: 10px; z-index: 1000;
       }
       .showmenu.menu { transform: rotate(-90deg); }
       
