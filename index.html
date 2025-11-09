@@ -61,15 +61,17 @@
     </div>
     <span class="menu" onclick="menu()" id="menu">&#9776;</span>
     <div class="opsi" id="opsi">
-      <span>halaman 1</span><br>
+      <span onclick="halaman1()>halaman 1</span><br>
       <span>halaman 2</span><br>
       <span>halaman 3</span>
     </div>
     <div style="height: 56px"></div>
+    <div id="halaman1">
     <div style="margin: 8px">
       <h1>Rendi Marzikri</h1>
       <p>Rendi Marzikri adalah pembuat konten yang juga berbagi informasi dan kode pemrograman.</p>
       <p>Rendi Marzikri yang asli: <a href="https://m.youtube.com/@User-bs1bc7sx5">@User-bs1bc7sx5</a></p>
+    </div>
    </div>
     <script>
       function menu() {
@@ -79,6 +81,14 @@
         } else { text.innerHTML = "&#9776"; }
         document.getElementById("menu").classList.toggle("showmenu");
         document.getElementById("opsi").classList.toggle("showopsi");
+      }
+      function halaman1() {
+        var text = document.getElementById("menu");
+        document.getElementById("menu").classList.toggle("showmenu");
+        document.getElementById("opsi").classList.toggle("showopsi");
+        text.innerHTML = "&#9776";
+
+        document.getElementById("halaman1").style.color = "green";
       }
     </script>
   </body>
