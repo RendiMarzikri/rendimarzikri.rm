@@ -48,7 +48,8 @@
         position: fixed; top: 5px; right: 10px; z-index: 1000;
       }
       .showmenu.menu { transform: rotate(-90deg); }
-      
+      .halaman { display: none; }
+      .halaman.active { display: block; }
     </style>
   </head>
   <body>
@@ -61,18 +62,28 @@
     </div>
     <span class="menu" onclick="menu()" id="menu">&#9776;</span>
     <div class="opsi" id="opsi">
-      <span onclick="halaman1()">halaman 1</span><br>
-      <span>halaman 2</span><br>
-      <span>halaman 3</span>
+      <span onclick="buka('halaman1')">halaman 1</span><br>
+      <span onclick="buka('halaman2')">halaman 2</span><br>
+      <span onclick="buka('halaman3')">halaman 3</span>
     </div>
     <div style="height: 56px"></div>
-    <div id="halaman1">
+    <div id="halaman1" class="halaman">
     <div style="margin: 8px">
       <h1>Rendi Marzikri</h1>
       <p>Rendi Marzikri adalah pembuat konten yang juga berbagi informasi dan kode pemrograman.</p>
       <p>Rendi Marzikri yang asli: <a href="https://m.youtube.com/@User-bs1bc7sx5">@User-bs1bc7sx5</a></p>
     </div>
    </div>
+   <div id="halaman2" class="halaman">
+     <div style="margin: 8px">
+       <h1>Halaman 2</h1>
+     </div>
+   </div>
+    <div id="halaman3" class="halaman">
+      <div style="margin: 8px">
+        <h1>Halaman 3</h1>
+      </div>
+    </div>
     <script>
       function menu() {
         var text= document.getElementById("menu");
@@ -82,13 +93,12 @@
         document.getElementById("menu").classList.toggle("showmenu");
         document.getElementById("opsi").classList.toggle("showopsi");
       }
-      function halaman1() {
-        var text = document.getElementById("menu");
+      function buka(id) {
+        document.querySelectorAll('.halaman').forEach(t => t.classList.remove("active");
+        document.getElementById(id).classList.add("active");
+
         document.getElementById("menu").classList.toggle("showmenu");
         document.getElementById("opsi").classList.toggle("showopsi");
-        text.innerHTML = "&#9776";
-
-        document.getElementById("halaman1").style.color = "green";
       }
     </script>
   </body>
