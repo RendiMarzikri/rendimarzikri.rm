@@ -95,6 +95,9 @@
         document.getElementById("opsi").classList.toggle("showopsi");
       }
       function buka(id) {
+        var text = document.getElementById("menu");
+        text.innerHTML = "☰";
+        
         document.querySelectorAll('.halaman').forEach(t => t.classList.remove("active"));
         document.getElementById(id).classList.add("active");
 
