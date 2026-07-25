@@ -56,9 +56,9 @@
   <body>
     <div class="top">
       <div>
-        <a href="#">beranda</a>
-        <a href="#kontak" style="margin-left: 10px">kontak</a>
-        <a href="#tentang" style="margin-left: 10px">tentang</a>
+        <a href="#" onclick="buka('halaman1'); tutupmenu()">beranda</a>
+        <a href="#kontak" onclick="buka('kontak'); tutupmenu()" style="margin-left: 10px">kontak</a>
+        <a href="#tentang" onclick="buka('tentang'); tutupmenu()" style="margin-left: 10px">tentang</a>
       </div>
     </div>
     <span class="menu" onclick="menu()" id="menu">&#9776;</span>
@@ -69,21 +69,31 @@
     </div>
     <div style="height: 56px"></div>
     <div id="halaman1" class="halaman active">
-    <div style="margin: 8px">
-      <h1>Rendi Marzikri</h1>
-      <p>Rendi Marzikri adalah pembuat konten yang juga berbagi informasi dan kode pemrograman.</p>
-      <p>YouTube Rendi Marzikri yang asli: <a href="https://m.youtube.com/@User-bs1bc7sx5">@User-bs1bc7sx5</a></p>
-      <p>Situs Web utama Rendi Marzikri yang asli: <a href="https://rendimarzikri.qzz.io">rendimarzikri.qzz.io</a></p>
+      <div style="margin: 8px">
+        <h1>Rendi Marzikri</h1>
+        <p>Rendi Marzikri adalah pembuat konten yang juga berbagi informasi dan kode pemrograman.</p>
+        <p>YouTube Rendi Marzikri yang asli: <a href="https://m.youtube.com/@User-bs1bc7sx5">@User-bs1bc7sx5</a></p>
+        <p>Situs Web utama Rendi Marzikri yang asli: <a href="https://rendimarzikri.qzz.io">rendimarzikri.qzz.io</a></p>
+      </div>
     </div>
-   </div>
-   <div id="halaman2" class="halaman">
-     <div style="margin: 8px">
-       <h1>Halaman 2</h1>
-     </div>
-   </div>
+    <div id="halaman2" class="halaman">
+      <div style="margin: 8px">
+        <h1>Halaman 2</h1>
+      </div>
+    </div>
     <div id="halaman3" class="halaman">
       <div style="margin: 8px">
         <h1>Halaman 3</h1>
+      </div>
+    </div>
+    <div id="kontak" class="halaman">
+      <div style="margin: 8px">
+        <h1>Kontak</h1>
+      </div>
+    </div>
+    <div id="tentang" class="halaman">
+      <div style="margin: 8px">
+        <h1>Tentang</h1>
       </div>
     </div>
     <script>
@@ -104,6 +114,10 @@
 
         document.getElementById("menu").classList.toggle("showmenu");
         document.getElementById("opsi").classList.toggle("showopsi");
+      }
+      function tutupmenu() {
+        document.getElementById("menu").classList.remove("showmenu");
+        document.getElementById("opsi").classList.remove("showopsi");
       }
     </script>
   </body>
