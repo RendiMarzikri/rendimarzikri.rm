@@ -30,7 +30,7 @@
         font-weight: bold;
       }
       .opsi {
-        background: #555;
+        background: #333;
         color: #f4f4f4;
         padding: 20px;
         position: fixed;
@@ -51,6 +51,15 @@
       .showmenu.menu { transform: rotate(-90deg); }
       .halaman { display: none; }
       .halaman.active { display: block; }
+      pre {
+        background: #012;
+        color: #0fcc;
+        padding: 15px;
+        overflow-x: scroll;
+        border-radius: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
     </style>
   </head>
   <body>
@@ -89,6 +98,11 @@
     <div id="kontak" class="halaman">
       <div style="margin: 8px">
         <h1>Kontak</h1>
+        <p>Hubungi Rendi Marzikri melalui Discord: "@rendimarzikri". Atau hubungi Rendi Marzikri melalui Api REST:</p>
+        <pre>curl -X POST "https://rendimarzikri.qzz.io/api/send-a-message-to-rendi-marzikri" \
+-H "Content-Type: application/json" \
+-d '{ "name": "NAMA_KAMU", "message": "PESAN_KAMU" }'
+        </pre>
       </div>
     </div>
     <div id="tentang" class="halaman">
