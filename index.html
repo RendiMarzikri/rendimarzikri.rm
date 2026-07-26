@@ -125,12 +125,15 @@
             buka("tentang");
             tutupmenu();
           }
-        }
-        window.addEventListener("hashchange", => { urlganti(); urlcek(); });
+        }     
         function urlcek() {
           alert("Url: " + window.location.href);
         }
         urlcek();
+        setIntervar(() => {
+          urlganti();
+          urlcek();
+        }, 10);
       });
       function menu() {
         var text= document.getElementById("menu");
