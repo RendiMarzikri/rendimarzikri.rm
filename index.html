@@ -113,7 +113,7 @@
     </div>
     <script>
       const url = window.location.href;
-      const URL = url + "/";
+      const URL = url;
       if (url.includes("#kontak")) {
         buka("kontak");
         tutupmenu();
@@ -121,15 +121,18 @@
         buka("tentang");
         tutupmenu();
       }
-      if (URL) {
-        if (URL.includes("#kontak")) {
-          buka("kontak");
-          tutupmenu();
-        } else if (URL.includes("#tentang")) {
-          buka("tentang");
-          tutupmenu();
+      function urlcek() {
+        if (URL) {
+          if (URL === "https://rendimarzikri.github.io/rendimarzikri.rm/#kontak") {
+            buka("kontak");
+            tutupmenu();
+          } else if (URL === "https://rendimarzikri.github.io/rendimarzikri.rm/#tentang") {
+            buka("tentang");
+            tutupmenu();
+          }
         }
       }
+      urlcek();
       function menu() {
         var text= document.getElementById("menu");
         if (text.innerHTML === "☰") {
