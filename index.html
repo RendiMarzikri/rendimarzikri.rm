@@ -112,27 +112,29 @@
       </div>
     </div>
     <script>
-      const url = location.href;
-      const URL = url;
-      if (url.includes("#kontak")) {
-        buka("kontak");
-        tutupmenu();
-      } else if (url.includes("#tentang")) {
-        buka("tentang");
-        tutupmenu();
-      }
-      function urlcek() {
-        if (URL) {
-          if (URL === "https://rendimarzikri.github.io/rendimarzikri.rm/#kontak") {
-            buka("kontak");
-            tutupmenu();
-          } else if (URL === "https://rendimarzikri.github.io/rendimarzikri.rm/#tentang") {
-            buka("tentang");
-            tutupmenu();
+      window.addEventListener("DOMContentLoaded", () => {
+        const url = window.location.hash;
+        const URL = url;
+        if (url === "#kontak") {
+          buka("kontak");
+          tutupmenu();
+        } else if (url === "#tentang") {
+          buka("tentang");
+          tutupmenu();
+        }
+        function urlcek() {
+          if (URL) {
+            if (URL === "https://rendimarzikri.github.io/rendimarzikri.rm/#kontak") {
+              buka("kontak");
+              tutupmenu();
+            } else if (URL === "https://rendimarzikri.github.io/rendimarzikri.rm/#tentang") {
+              buka("tentang");
+              tutupmenu();
+            }
           }
         }
-      }
-      urlcek();
+        urlcek();
+      });
       function menu() {
         var text= document.getElementById("menu");
         if (text.innerHTML === "☰") {
