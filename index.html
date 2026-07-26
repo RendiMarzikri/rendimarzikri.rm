@@ -113,12 +113,22 @@
     </div>
     <script>
       const url = window.location.href;
+      const URL = url + "/";
       if (url.includes("#kontak")) {
         buka("kontak");
         tutupmenu();
       } else if (url.includes("#tentang")) {
         buka("tentang");
         tutupmenu();
+      }
+      if (URL) {
+        if (URL.includes("#kontak")) {
+          buka("kontak");
+          tutupmenu();
+        } else if (URL.includes("#tentang")) {
+          buka("tentang");
+          tutupmenu();
+        }
       }
       function menu() {
         var text= document.getElementById("menu");
