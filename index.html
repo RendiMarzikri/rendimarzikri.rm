@@ -125,15 +125,7 @@
           tutupmenu();
         }
         function urlcek() {
-          if (URL) {
-            if (URL === "https://rendimarzikri.github.io/rendimarzikri.rm/#kontak") {
-              buka("kontak");
-              tutupmenu();
-            } else if (URL === "https://rendimarzikri.github.io/rendimarzikri.rm/#tentang") {
-              buka("tentang");
-              tutupmenu();
-            }
-          }
+          alert("Url: " + window.location.href);
         }
         urlcek();
       });
