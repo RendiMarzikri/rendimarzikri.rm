@@ -108,9 +108,18 @@
     <div id="tentang" class="halaman">
       <div style="margin: 8px">
         <h1>Tentang</h1>
+        <p>Baca informasi selengkapnya tentang Rendi Marzikri di situs web resminya: <a href="https://rendimarzikri.qzz.io/">rendimarzikri.qzz.io</a></p>
       </div>
     </div>
     <script>
+      const url = window.location.href;
+      if (url.includes("#kontak")) {
+        buka("kontak");
+        tutupmenu();
+      } else if (url.includes("#tentang")) {
+        buka("tentang");
+        tutupmenu();
+      }
       function menu() {
         var text= document.getElementById("menu");
         if (text.innerHTML === "☰") {
