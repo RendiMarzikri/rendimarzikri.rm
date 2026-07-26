@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rendi Marzikri website</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         background-color: #000;
         margin: 0;
@@ -60,6 +66,25 @@
         margin-top: 20px;
         margin-bottom: 20px;
       }
+      .flex {
+        display: flex;
+      }
+      .flex1 { } .flex1 > img {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: 1px solid #444;
+      }
+      .flex2 {
+        margin-left: 20px;
+      }
+      .rendi_handle { } .rendi_handle > a {
+        text-decoration: none;
+        color: #888;
+      }
+      .top {
+        margin-bottom: 30px;
+      }
     </style>
   </head>
   <body>
@@ -88,6 +113,19 @@
     <div id="halaman2" class="halaman">
       <div style="margin: 8px">
         <h1>Halaman 2</h1>
+        <div class="top">
+          <div class="flex">
+            <div class="flex1>
+              <img src="/rendimarzikri.rm/src/icon_profile.jpeg">
+            </div>
+            <div class="flex2">
+              <h2>Rendi Marzikri</h2>
+              <div class="rendi_handle">
+                <a href="https://m.youtube.com/@User-bs1bc7sx5">@User-bs1bc7sx5</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div id="halaman3" class="halaman">
