@@ -112,29 +112,18 @@
       </div>
     </div>
     <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        const url = window.location.hash;
-        const URL = url;
-        function urlganti() {
-          if (url === "#kontak") {
-            alert("Berhasil di buka: " + url);
-            buka("kontak");
-            tutupmenu();
-          } else if (url === "#tentang") {
-            alert("Berhasil di buka: " + url);
-            buka("tentang");
-            tutupmenu();
-          }
-        }     
-        function urlcek() {
-          alert("Url: " + window.location.href);
+      function cekhash() {
+        const hash = window.location.hash;
+        if (hash === "#kontak") {
+          buka("kontak");
+          tutupmenu();
+        } else if (hash === "#tentang") {
+          buka("tentang");
+          tutupmenu();
         }
-        urlcek();
-        setIntervar(() => {
-          urlganti();
-          urlcek();
-        }, 10);
-      });
+      }
+     window.addEventListener("load", cekhash);
+     window.addEventListener("hashchange", cekhash);
       function menu() {
         var text= document.getElementById("menu");
         if (text.innerHTML === "☰") {
